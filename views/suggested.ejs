@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Profile</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            height: 270px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-info img {
+            border-radius: 50%;
+            margin-right: 16px;
+            width: 180px;
+            height: 180px;
+        }
+        .userdets{
+            margin-left: 70px;
+        }
+        .profile-info h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        main {
+            padding: 20px;
+            gap: 15px; /* Adjust the gap between posts */
+            /* flex-wrap: nowrap;             */
+        }
+
+        .post {
+            overflow-x: hidden;
+            height: fit-content;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box; 
+            border: 1px solid #e1e1e1;
+            
+        }
+
+        .post img {
+            width: 32%;
+            max-height: 500px;
+            object-fit: cover;
+            margin: 5px;
+            border: 1px solid #e1e1e1;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-actions {
+            display: flex;
+            align-items: center;
+            margin-top: -100px;
+        }
+
+        .profile-actions button {
+            margin-left: 20px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color:rgba(176, 174, 174, 0.326);
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #papa{
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        .left{
+            height: 100%;
+            width: 15%;
+            border-right: 1px solid black;
+            position: fixed;
+            padding: 0px 20px;
+        }
+        .right{
+            height: 100%;
+            width: 82%;
+            /* border-left: 1px dotted black; */
+            margin-left: 18%; /* Adjusted to match the width of the left part */
+
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 16px;
+        }
+        .logo {
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: start; */
+            margin-top: 40px;
+        }
+        nav button{
+            color: #333;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 14px;
+            text-align: start;
+        }
+        .logo img {
+            width: 150px;
+            margin-right: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="papa">
+        <div class="left">
+            <div class="logo">
+                <img src="https://freelogopng.com/images/all_img/1658587465instagram-name-logo.png" alt="Instagram Logo">
+            </div>
+            <nav>
+                <a href="/home"><i class="ri-home-7-line"></i>Home</a>
+                <button id="searchbtn"><i class="ri-search-line"></i>Search</button>
+                <a href="/explore"><i class="ri-ie-fill"></i>Explore</a>
+                <a href="/reels"><i class="ri-screenshot-2-line"></i>Reels</a>
+                <a href="/messages"><i class="ri-message-line"></i>Messages</a>
+                <a href="/notifications"><i class="ri-notification-line"></i>Notifications</a>
+                <a href="/upload"><i class="ri-lightbulb-line"></i>Create</a>
+                <a href="/profile"><i class="ri-account-circle-fill"></i></i>My Profile</a>
+                <button class="button" style="margin-top: 50px;"><i class="ri-align-justify"></i>More</button>
+            </nav>
+            <div class="logbox" style="height: 430px;width: 270px;background-color:white; position:relative; margin-top: -460px;border:3px solid rgba(184, 179, 179, 0.281); border-radius: 20px; opacity: 0;">
+                <div style="display: flex;flex-direction: column;font-size: 18px; font-weight: 600;padding:10px 20px;gap:35px; color:#333">
+                <a href=""><i class="ri-settings-2-line"></i>Settings</a>
+                <a href=""><i class="ri-gallery-line"></i>Your Activity</a>
+                <a href=""><i class="ri-save-line"></i>Save</a>
+                <a href=""><i class="ri-sun-line"></i>Switch Mode</a>
+                <a href=""><i class="ri-error-warning-line"></i>Report a Problem</a>
+                <a href="/login">Switch Account</a>
+                <a href="/login">Log Out</a>
+                </div>
+                </div>
+        </div>
+        <div style="display: flex;justify-content: center;margin-left: 150px;">
+        <div style="display: flex; justify-content: space-evenly;gap:70px;">
+            <h3 style="margin-top: 19px; margin-left: 500px;font-weight: 500;color:rgba(43, 42, 42, 0.642);font-size: 17px;">Suggested for you</h3>
+           
+        </div>
+        <div class="allusers" style="margin-top: 80px;margin-left: -140px;">
+            <% allUser.forEach(user => { %>
+                <div class="top" style="display: flex;justify-content: space-between; margin-top: 15px; height: 70px;">
+                    <img style="height: 50px; width: 50px; border-radius: 50%; object-fit: cover;" src="/images/uploads/<%= user.profileImage %>" alt="">
+                    <div style="margin-left: 10px; display: flex; flex-direction: column;">
+                        <h2 style="font-size: 17px; font-weight: 600; margin-top: 5px ;margin-left: -0px;"><%= user.username %></h2>
+                        <h2 style="font-size: 13px; font-weight: 400; margin-top: -5px; margin-left: -0px;"><%= user.fullname %></h2>
+                    </div>
+                    <button style="padding: 5px 10px; font-size: 14px; font-weight: 500; color: blue; margin-left: 30px; align-self: baseline;">Follow</button>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+var event = 0;
+
+document.querySelector(".button").addEventListener("click", function () {
+    if (event == 0) {
+        document.querySelector(".logbox").style.opacity = "1";
+        event = 1;
+    } else {
+        document.querySelector(".logbox").style.opacity = "0"; 
+        event = 0;
+    }
+});
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

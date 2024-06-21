@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        
+        html,body{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            height: 100vh;
+            /* height: 100%; */
+            /* margin-top: 100px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 0px 30px;
+            width: 350px;
+            height: 70vh;
+            text-align: center;
+        }
+
+        .login-container img {
+            width: fit-content;
+            height: 80px;
+            
+            margin-top: 20px;
+        }
+
+
+        .input-group {
+            margin-top: -50px;
+            margin-top: 40px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+        .input-group1 input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .forgot-password {
+            text-align:center;
+            text-decoration:none;
+            margin-top: 25px;
+            font-size: 19px;
+        }
+        .forgot-password a{
+            text-decoration: none;
+            color:black;
+        }
+
+        .login-btn {
+            background-color: #3897f0;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-btn-wf {
+            background-color: #3897f0;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .or-divider {
+            margin: 40px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .signup-section {
+            text-align: center;
+        }
+
+        .signup-section p {
+            margin-top:-30px;
+        }
+
+        .signup-link {
+            color: #3897f0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMaJr0B21N0SLLrMF7rpIEc51oXfIxOTe4ZQ&usqp=CAU" alt="Instagram Logo">
+        <form action="/login" method="post">
+            <div class="input-group">
+                
+                <input type="text" id="username" placeholder="username or email " name="username" required>
+            </div>
+
+            <div class="input-group1">
+                
+                <input type="password" id="password" placeholder="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+
+
+            
+
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="button" class="login-btn-wf">Login with Google</button>
+
+
+
+            <div class="or-divider"></div>
+
+        </form>
+
+        <div class="signup-section">
+            <p>Don't have an account? <a href="/register" class="signup-link">Sign up</a></p>
+        </div>
+    </div>
+</body>
+</html>
+<!-- nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+} -->
+
+<!-- .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.logo img {
+    width: 150px;
+    margin-right: 8px;
+} -->

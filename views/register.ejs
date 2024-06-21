@@ -1,0 +1,113 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Registration</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        
+        html,body{
+        width: 100%;
+        height: 100%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .registration-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 340px;
+            height: 75vh;
+            text-align: center;
+        }
+
+        .registration-container img {
+            width: 200px;
+            height: 210px;
+            margin-top: -70px;
+        }
+
+        .registration-container h2 {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px 10px;
+            box-sizing: border-box;
+            /* margin-bottom: 10px; */
+        }
+
+        .registration-btn {
+            background-color: #3897f0;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-link {
+            /* margin-top: 50px; */
+            color: #3897f0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        p{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <img src="https://hindubabynames.info/wp-content/themes/hbn_download/download/social-media/instagram-logo.png" alt="Instagram Logo">
+        <h2>Sign up to see photos and videos<br> from your friends.</h2>
+        <form method="post" action="/register">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="email or phone no" name="email" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="fullname" placeholder="fullname" name="fullname" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="username" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="password" name="password" required>
+            </div>
+
+            <button type="submit" class="registration-btn">Sign Up</button>
+        </form>
+
+        <p>Already have an account? <a href="/login" class="login-link">Log in</a></p>
+    </div>
+</body>
+</html>

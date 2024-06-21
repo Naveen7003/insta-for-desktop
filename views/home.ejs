@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        
+        html,body{
+        width: 100%;
+        height: 100%;
+        }
+        .left{
+            height: 100%;
+            width: 18%;
+            border-right: 1px solid black;
+            position: fixed;
+            padding: 0px 20px;
+        }
+        .right{
+            height: 100%;
+            width: 82%;
+            margin-left: 18%; /* Adjusted to match the width of the left part */
+
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 25px;
+        }
+        nav button{
+            color: #333;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 14px;
+            text-align: start;
+        }
+        .logo {
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: start; */
+            margin-top: 40px;
+        }
+
+        .logo img {
+            width: 150px;
+            margin-right: 8px;
+        }
+        .story::-webkit-scrollbar {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div style="position:fixed;height: 80%; width: 25%; opacity:0; margin-left: 200px; background-color:black;margin-top: 50px;" id="popup" class=" px-4 py-5">
+        <div class="border-2 border-zinc-800 flex items-center justify-between px-2 py-1 rounded-md">
+            <i class="text-white ri-search-line"></i>
+            <input id="inputusername" class="ml-1 w-full bg-zinc-900 outline-none text-zinc-400" type="text" placeholder="search username">
+        </div>
+        <div class="users" style="overflow: hidden;">
+    
+           
+        </div>
+      </div>
+    <div id="main" style="display:flex; height: 100%; width: 100%; ">
+        <div class="left">
+            <div class="logo">
+                <img src="https://freelogopng.com/images/all_img/1658587465instagram-name-logo.png" alt="Instagram Logo">
+            </div>
+            <nav>
+                <a href="/home"><i class="ri-home-7-line"></i>Home</a>
+                <button id="searchbtn"><i class="ri-search-line"></i>Search</button>
+                <a href="/explore"><i class="ri-ie-fill"></i>Explore</a>
+                <a href="/reels"><i class="ri-screenshot-2-line"></i>Reels</a>
+                <a href="/messages"><i class="ri-message-line"></i>Messages</a>
+                <a href="/notifications"><i class="ri-notification-line"></i>Notifications</a>
+                <a href="/create"><i class="ri-lightbulb-line"></i>Create</a>
+                <a href="/profile"><i class="ri-account-circle-fill"></i>My Profile</a>
+                <button class="button" style="margin-top: 50px;"><i class="ri-align-justify"></i>More</button>
+
+            </nav>
+            <div class="logbox" style="height: 430px;width: 270px;background-color:white; position:relative; margin-top: -460px;border:3px solid rgba(184, 179, 179, 0.281); border-radius: 20px; opacity: 0;">
+                <div style="display: flex;flex-direction: column;font-size: 18px; font-weight: 600;padding:10px 20px;gap:35px; color:#333">
+                <a href=""><i class="ri-settings-2-line"></i>Settings</a>
+                <a href=""><i class="ri-gallery-line"></i>Your Activity</a>
+                <a href=""><i class="ri-save-line"></i>Save</a>
+                <a href=""><i class="ri-sun-line"></i>Switch Mode</a>
+                <a href=""><i class="ri-error-warning-line"></i>Report a Problem</a>
+                <a href="/login">Switch Account</a>
+                <a href="/login">Log Out</a>
+                </div>
+                </div>
+        </div>
+        <div class="right" style="padding: 0px 80px; ">
+            <div class="story" style="height: 110px; width: 640px; margin-top: 40px; display: flex; align-items: center; padding: 0px 5px; overflow-y: auto;">
+                <div class="following" style="margin: 5px;">
+                    <div class="a bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500" style="height: 80px; width: 80px; border-radius: 50%; background-color: antiquewhite;display: flex;justify-content: center;align-items: center;">
+                    <img style="height:92%; width:92%; object-fit: cover; border-radius: 50%;object-position:top;"  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" alt="">
+                    </div>
+                    <h4 style="margin-left: 27px;">user1</h4>
+                </div>
+                <div class="following" style="margin: 5px;">
+                    <div class="a bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500" style="height: 80px; width: 80px; border-radius: 50%; background-color: antiquewhite;display: flex;justify-content: center;align-items: center;">
+                    <img style="height:92%; width:92%; object-fit: cover; border-radius: 50%;object-position:top;"  src="https://images.unsplash.com/photo-1617441356293-de82acf3552f?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
+                    <h4 style="margin-left: 27px;">user1</h4>
+                </div>
+                <div class="following" style="margin: 5px;">
+                    <div class="a bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500" style="height: 80px; width: 80px; border-radius: 50%; background-color: antiquewhite;display: flex;justify-content: center;align-items: center;">
+                    <img style="height:92%; width:92%; object-fit: cover; border-radius: 50%;object-position:top;"  src="https://images.unsplash.com/photo-1589959355080-a3d26b7eed01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8" alt="">
+                    </div>
+                    <h4 style="margin-left: 27px;">user1</h4>
+                </div>
+                <div class="following" style="margin: 5px;">
+                    <div class="a bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500" style="height: 80px; width: 80px; border-radius: 50%; background-color: antiquewhite;display: flex;justify-content: center;align-items: center;">
+                    <img style="height:92%; width:92%; object-fit: cover; border-radius: 50%;object-position:top;"  src="https://images.unsplash.com/photo-1617973597648-171b172eebe3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D" alt="">
+                    </div>
+                    <h4 style="margin-left: 27px;">user1</h4>
+                </div>
+                <div class="following" style="margin: 5px;">
+                    <div class="a bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500" style="height: 80px; width: 80px; border-radius: 50%; background-color: antiquewhite;display: flex;justify-content: center;align-items: center;">
+                    <img style="height:92%; width:92%; object-fit: cover; border-radius: 50%;object-position:top;"  src="https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" alt="">
+                    </div>
+                    <h4 style="margin-left: 27px;">user1</h4>
+                </div>
+                <div class="following" style="margin: 5px;">
+                    <div class="a bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500" style="height: 80px; width: 80px; border-radius: 50%; background-color: antiquewhite;display: flex;justify-content: center;align-items: center;">
+                    <img style="height:92%; width:92%; object-fit: cover; border-radius: 50%;object-position:top;"  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8" alt="">
+                    </div>
+                    <h4 style="margin-left: 27px;">user1</h4>
+                </div>
+                <div class="following" style="margin: 5px;">
+                    <div class="a bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500" style="height: 80px; width: 80px; border-radius: 50%; background-color: antiquewhite;display: flex;justify-content: center;align-items: center;">
+                    <img style="height:92%; width:92%; object-fit: cover; border-radius: 50%;object-position:top;"  src="https://images.unsplash.com/photo-1520512202623-51c5c53957df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8" alt="">
+                    </div>
+                    <h4 style="margin-left: 27px;">user1</h4>
+                </div>
+                <div class="following" style="margin: 5px;">
+                    <div class="a bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500" style="height: 80px; width: 80px; border-radius: 50%; background-color: antiquewhite;display: flex;justify-content: center;align-items: center;">
+                    <img style="height:92%; width:92%; object-fit: cover; border-radius: 50%;object-position:top;"  src="https://images.unsplash.com/photo-1529232356377-57971f020a94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHx8" alt="">
+                    </div>
+                    <h4 style="margin-left: 27px;">user1</h4>
+                </div>
+                <div class="following" style="margin: 5px;">
+                    <div class="a bg-sky-100 rounded-full bg-gradient-to-r from-purple-700 to-orange-500" style="height: 80px; width: 80px; border-radius: 50%; background-color: antiquewhite;display: flex;justify-content: center;align-items: center;">
+                    <img style="height:92%; width:92%; object-fit: cover; border-radius: 50%;object-position:top;"  src="https://images.unsplash.com/photo-1621390842036-f01b53d9cbfd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D" alt="">
+                    </div>
+                    <h4 style="margin-left: 27px;">user1</h4>
+                </div>
+            </div>
+            
+         <div class="posts" style="height:100%; width:100%; display: flex; flex-direction: column; padding-top: 40px; gap:200px;">
+      <%  posts.reverse().forEach(function(elem){     %>
+            <div class="post" style="height: 630px; width: 450px; margin-left:100px; padding: 0px 5px;">
+                <div style="display: flex; gap:0px">
+                <img style="height: 35px; width: 35px;object-fit: cover; border-radius: 50%;" src="/images/uploads/<%= elem.user.profileImage %>" alt="">
+                <h2 style="margin-left: 4px; font-family:sans-serif; font-size: 20px; margin-top: 0px;"><%= elem.user.username %></h2>
+
+                </div>
+                <div class="postpicture" style="height: 80%; width: 100%;background-color: beige;margin-top: 10px;">
+                    <img style="object-fit: cover; height: 100%; width: 100%;" src="/images/uploads/<%= elem.picture %>" alt="">
+                </div>
+                <div style="display: flex;gap:10px; height: fit-content; width: fit-content; justify-content:space-between; margin-top: 10px;">
+                    <a href="/like/post/<%= elem._id %>" class="like" style="font-size: 30px; margin-left: 5px;">
+                            <% if(elem.likes.indexOf(user._id) === -1){ %>
+                                <i class="ri-heart-fill" style="color:red;"></i>
+                           <% }else {   %>
+                            <i class="ri-heart-line"></i>
+                        <%   } %>
+                                
+                            </a>
+                            <i style="font-size: 30px; margin-left: 5px;" class="ri-chat-3-line"></i>
+                            <i style="font-size: 30px; margin-left: 5px;" class="ri-share-forward-line"></i>
+                </div>
+                <h4 style="font-family: sans-serif;color:rgb(33, 31, 31);font-weight: 300; margin-left: 8px; margin-top: 2px; font-size: 20px;"><%= elem.likes.length %> likes</h4>
+                <h3 style="font-family: sans-serif;color:rgb(33, 31, 31);font-weight: 300; margin-top: 2px;font-size: 17px;"><%= elem.user.username %><span style="margin-left: 10px;"><%= elem.caption %></span></h3>
+                <h4 style="font-family: sans-serif;color:gray;font-weight: 300; margin-top: 10px;">view all 200 comments</h4>
+                <h4 style="font-family: sans-serif;color:gray;font-weight: 300; margin-top: 10px;">Add a comment....</h4>
+        
+                 </div>
+      <%  }) %>
+        </div>
+           
+    </div>
+        <div class="rightmost" style="height: 500px; width: 550px;margin-top: 40px;margin-right:60px;padding:10px 15px;overflow-y: auto;">
+        <div class="top" style="display: flex;">
+            <img style="height: 60px; width: 60px; border-radius: 50%;object-fit: cover;" src="/images/uploads/<%= user.profileImage %>" alt="">
+            <h2 style="font-size: 20px;font-weight: 600;margin-left: 10px;margin-top: 5px;"><%=user.username %></h2>
+            <h2 style="font-size: 20px;font-weight: 400;margin-left:-90px;margin-top: 30px;"><%= user.fullname %></h2>
+            <a href="/login" style="font-size: 17px;color:blue;font-weight: 500;margin-left:75px;margin-top: 15px;">Switch</a>
+        </div>
+        <div style="display: flex; justify-content: space-evenly;gap:70px;">
+        <h3 style="margin-top: 19px; margin-left: 5px;font-weight: 500;color:rgba(43, 42, 42, 0.642);font-size: 17px;">Suggested for you</h3>
+        <a href="/suggested"><h4 style="margin-top: 19px;font-weight: 500;color:blue;font-size: 17px;margin-left: 25px;">See all</h4></a>
+    </div>
+    <div class="allusers">
+        <% allUser.forEach(user => { %>
+            <div class="top" style="display: flex;justify-content: space-between; margin-top: 15px; height: 70px;">
+                <img style="height: 50px; width: 50px; border-radius: 50%; object-fit: cover;" src="/images/uploads/<%= user.profileImage %>" alt="">
+                <div style="margin-left: 10px; display: flex; flex-direction: column;">
+                    <h2 style="font-size: 17px; font-weight: 600; margin-top: 5px ;margin-left: -50px;"><%= user.username %></h2>
+                    <h2 style="font-size: 13px; font-weight: 400; margin-top: -5px; margin-left: -50px;"><%= user.fullname %></h2>
+                </div>
+                <button style="padding: 5px 10px; font-size: 14px; font-weight: 500; color: blue; margin-left: 30px; align-self: baseline;">Follow</button>
+            </div>
+        <% }); %>
+    </div>
+    
+    
+    
+        </div>
+    </div>
+    
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js" integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+       var click = 0;
+
+document.querySelector("#searchbtn").addEventListener("click", function () {
+    if (click == 0) {
+        document.querySelector("#popup").style.opacity = "1";
+        click = 1;
+    } else {
+        document.querySelector("#popup").style.opacity = "0"; 
+        click = 0;
+    }
+});
+    let clutter = "";
+    const inp = document.querySelector("#inputusername")
+    inp.addEventListener("input", function(){
+        axios.get(`/username/${inp.value}`)
+        .then(function(data){
+            clutter = "";
+            data.data.forEach(function(elem){
+                clutter += `<a href="/profile" class="outline-none">
+                <div class="text-white flex items-center gap-2 mt-5">
+                    <div style="height: 75px; width: 80px; border-radius: 50%; background-color: white;" class="image rounded-full ">
+                        <img style="height: 100%; width: 100%; object-fit: cover; border-radius:50%;" src="/images/uploads/${elem.profileImage}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>${elem.username}</h3>
+                        <h4 class="text-xs opacity-30 leading-none">${elem.fullname}</h4>
+                    </div>
+                </div>            
+            </a>`
+            document.querySelector(".users").innerHTML = clutter;
+            })
+         })
+    })
+
+
+    var event = 0;
+
+document.querySelector(".button").addEventListener("click", function () {
+    if (event == 0) {
+        document.querySelector(".logbox").style.opacity = "1";
+        event = 1;
+    } else {
+        document.querySelector(".logbox").style.opacity = "0"; 
+        event = 0;
+    }
+});
+
+
+
+
+        
+      </script>
+</body>
+</html>
+
